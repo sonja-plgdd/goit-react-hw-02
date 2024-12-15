@@ -1,6 +1,6 @@
 import s from "./Feedback.module.css";
 
-function Feedback({ values, positiveFeedback }) {
+function Feedback({ values, positiveFeedback, totalfeedback }) {
   return (
     <div>
       <ul className={s.feedbacklist}>
@@ -11,8 +11,9 @@ function Feedback({ values, positiveFeedback }) {
             </li>
           );
         })}
+        <li>Total: {totalfeedback}</li>
+        <li>Positive: {positiveFeedback}%</li>
       </ul>
-      <p>Positive: {positiveFeedback}%</p>
     </div>
   );
 }

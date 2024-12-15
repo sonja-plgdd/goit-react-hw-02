@@ -1,6 +1,6 @@
 import styles from "./Options.module.css";
 
-function Options({ updateFeedback, totalFeedback }) {
+function Options({ updateFeedback, totalFeedback, resetFeedback }) {
   const handleClick = (feedbackType) => {
     updateFeedback(feedbackType);
   };
@@ -18,7 +18,7 @@ function Options({ updateFeedback, totalFeedback }) {
         </li>
         {totalFeedback > 0 && (
           <li>
-            <button onClick={() => handleClick("reset")}>Reset</button>
+            <button onClick={resetFeedback}>Reset</button>
           </li>
         )}
       </ul>
